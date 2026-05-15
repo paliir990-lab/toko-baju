@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nama": "Kaos Polos Cotton Combed",
+        "kategori": "kaos",
+        "harga": "Rp 89.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Hitam", "Putih", "Navy", "Abu-abu"],
+        "ukuran": ["S", "M", "L", "XL"],
+        "deskripsi": "Bahan cotton combed 30s, adem dan nyaman dipakai sehari-hari"
+    },
+    {
+        "id": 2,
+        "nama": "Kaos Distro Graphic",
+        "kategori": "kaos",
+        "harga": "Rp 120.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Hitam", "Putih"],
+        "ukuran": ["M", "L", "XL"],
+        "deskripsi": "Kaos dengan sablon graphic design eksklusif, bahan premium"
+    },
+    {
+        "id": 3,
+        "nama": "Kemeja Flanel Kotak-kotak",
+        "kategori": "kemeja",
+        "harga": "Rp 145.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Merah-Hitam", "Biru-Putih"],
+        "ukuran": ["M", "L", "XL", "XXL"],
+        "deskripsi": "Kemeja flanel motif kotak, bahan lembut cocok untuk santai maupun formal"
+    },
+    {
+        "id": 4,
+        "nama": "Kemeja Oxford Slimfit",
+        "kategori": "kemeja",
+        "harga": "Rp 165.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Putih", "Biru Muda", "Hitam"],
+        "ukuran": ["M", "L", "XL"],
+        "deskripsi": "Kemeja Oxford bahan katun twill, potongan slimfit modern"
+    },
+    {
+        "id": 5,
+        "nama": "Jaket Hoodie Polos",
+        "kategori": "jaket",
+        "harga": "Rp 185.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Hitam", "Abu-abu", "Navy", "Maroon"],
+        "ukuran": ["M", "L", "XL"],
+        "deskripsi": "Hoodie bahan fleece tebal, hangat dan nyaman"
+    },
+    {
+        "id": 6,
+        "nama": "Jaket Bomber Vintage",
+        "kategori": "jaket",
+        "harga": "Rp 90.000",
+        "foto": "assets/images/products/product-6.jpg",
+        "warna": ["Hitam", "Army Green"],
+        "ukuran": ["L", "XL", "XXL"],
+        "deskripsi": "Jaket bomber model vintage, bahan drill tebal, style klasik"
+    },
+    {
+        "id": 7,
+        "nama": "Jaket Bomber Vintage",
+        "kategori": "jaket",
+        "harga": "Rp 90.000",
+        "foto": "assets/images/products/product-6.jpg",
+        "warna": ["Hitam", "Army Green"],
+        "ukuran": ["L", "XL", "XXL"],
+        "deskripsi": "Jaket bomber model vintage, bahan drill tebal, style klasik"
+    },
+    {
+        "id": 8,
+        "nama": "Jaket Bomber Vintage",
+        "kategori": "jaket",
+        "harga": "Rp 90.000",
+        "foto": "assets/images/products/product-6.jpg",
+        "warna": ["Hitam", "Army Green"],
+        "ukuran": ["L", "XL", "XXL"],
+        "deskripsi": "Jaket bomber model vintage, bahan drill tebal, style klasik"
+    },
+    {
+        "id": 12,
+        "nama": "Produk 10",
+        "kategori": "jaket",
+        "harga": "Rp 90.000",
+        "foto": "assets/images/products/product-6.jpg",
+        "warna": ["Hitam", "Army Green"],
+        "ukuran": ["L", "XL", "XXL"],
+        "deskripsi": "Jaket bomber model vintage, bahan drill tebal, style klasik"
+    }
+]

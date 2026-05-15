@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toko Baju - Koleksi kaos, kemeja, dan jaket berkualitas dengan harga terjangkau">
+    <title data-brand>Toko Baju</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo" data-brand>Toko <span>Baju</span></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <a href="#products">Produk</a>
+                <a href="#testimonials">Testimoni</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 data-hero-title>Tampil Stylish Setiap Hari</h1>
+            <p data-hero-subtitle>Koleksi kaos, kemeja, dan jaket berkualitas dengan harga terjangkau</p>
+            <a href="#products" class="hero-btn">Lihat Koleksi</a>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk Kami</h2>
+                <p>Pilih koleksi favorit Anda</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="search-bar">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" id="searchInput" placeholder="Cari produk..." oninput="searchProducts()">
+            </div>
+
+            <div class="filter-bar" id="filterBar"></div>
+
+            <div class="product-grid" id="productGrid">
+                <div class="no-products">
+                    <p>Memuat produk...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimoni Pelanggan</h2>
+                <p>Apa kata mereka tentang produk kami</p>
+                <div class="line"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack"></div>
+                <div class="testimonial-nav" id="testimonialDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Kami</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <p data-about>Toko Baju adalah brand fashion lokal yang menyediakan berbagai pakaian berkualitas dengan desain modern dan harga bersahabat. Kami selalu mengutamakan kenyamanan dan kepuasan pelanggan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>Pesan sekarang atau tanyakan produk yang Anda butuhkan</p>
+            <div class="contact-links">
+                <a class="contact-link wa" data-wa href="#" target="_blank">
+                    &#128222; WhatsApp
+                </a>
+                <a class="contact-link ig" data-ig href="#" target="_blank">
+                    &#128247; Instagram
+                </a>
+                <a class="contact-link email" href="mailto:tokobaju@email.com">
+                    &#9993; Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span data-brand>Toko Baju</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img class="lightbox-img" id="lbImg" src="" alt="">
+        <div class="lightbox-detail">
+            <h3 id="lbNama"></h3>
+            <div class="price" id="lbHarga"></div>
+            <div class="desc" id="lbDesc"></div>
+            <button class="btn-order-lb" id="lbOrder">Pesan via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <button class="wa-float" onclick="orderWhatsAppGeneral()" title="Hubungi via WhatsApp">&#128172;</button>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="config.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

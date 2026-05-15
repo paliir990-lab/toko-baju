@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Sarah Putri",
+        "kota": "Jakarta",
+        "rating": 5,
+        "komentar": "Kualitas bajunya bagus banget, bahannya adem. Cepet sampai juga!",
+        "foto": "assets/images/testimonials/user1.svg"
+    },
+    {
+        "nama": "Rizky Ardiansyah",
+        "kota": "Bandung",
+        "rating": 5,
+        "komentar": "Ukurannya pas, jahitan rapi. Recommended banget buat yang cari baju berkualitas.",
+        "foto": "assets/images/testimonials/user2.svg"
+    },
+    {
+        "nama": "Dian Permata",
+        "kota": "Surabaya",
+        "rating": 4,
+        "komentar": "Pesen kemeja, bahan oke, pelayanan ramah. Next order lagi!",
+        "foto": "assets/images/testimonials/user3.svg"
+    }
+]
