@@ -88,5 +88,15 @@
         "warna": ["Hitam", "Army Green"],
         "ukuran": ["L", "XL", "XXL"],
         "deskripsi": "Jaket bomber model vintage, bahan drill tebal, style klasik"
+    },
+    {
+        "id": 13,
+        "nama": "Kemeja Denim Santai",
+        "kategori": "kemeja",
+        "harga": "Rp 175.000",
+        "foto": "assets/images/products/placeholder.svg",
+        "warna": ["Biru Muda", "Biru Tua"],
+        "ukuran": ["M", "L", "XL"],
+        "deskripsi": "Kemeja bahan denim tipis, cocok untuk santai maupun hangout"
     }
 ]

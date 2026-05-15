@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#e8d48b"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2, 4)">
+    <rect x="4" y="8" width="28" height="32" rx="4" stroke="url(#goldGrad)" stroke-width="2.5" fill="none"/>
+    <path d="M0 8 L10 2 L26 2 L36 8" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M14 14 L14 30 M22 14 L22 30" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <text x="52" y="20" font-family="'Playfair Display', 'Georgia', serif" font-size="18" font-weight="700" fill="#c9a84c" letter-spacing="1">Toko</text>
+  <text x="52" y="40" font-family="'Playfair Display', 'Georgia', serif" font-size="18" font-weight="700" fill="url(#goldGrad)" letter-spacing="2">BAJU</text>
+</svg>

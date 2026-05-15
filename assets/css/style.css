@@ -148,24 +148,42 @@ header.scrolled {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light), var(--accent-gold));
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmerText 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-@keyframes shimmerText {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    transition: var(--transition);
 }
 
-.logo span {
-    -webkit-text-fill-color: var(--accent-gold-light);
+.logo:hover .logo-img {
+    filter: brightness(1.2);
+}
+
+.hero-logo {
+    display: block;
+    margin: 0 auto 24px;
+    width: 180px;
+    height: auto;
+    animation: fadeInDown 0.8s ease;
+    filter: drop-shadow(0 0 30px rgba(201,168,76,0.15));
+}
+
+.footer-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+    margin: 0 auto 12px;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.footer-logo:hover {
+    opacity: 1;
 }
 
 nav a {
