@@ -75,6 +75,23 @@
 
             <div class="filter-bar reveal" id="filterBar" style="transition-delay:0.15s"></div>
 
+            <div class="product-count" id="productCount"></div>
+
+            <div class="product-showcase reveal" style="transition-delay:0.2s">
+                <div class="showcase-track" id="showcaseTrack"></div>
+                <div class="showcase-arrows">
+                    <button class="showcase-arrow" onclick="scrollShowcase(-1)">&#8249;</button>
+                    <button class="showcase-arrow" onclick="scrollShowcase(1)">&#8250;</button>
+                </div>
+                <div class="showcase-dots" id="showcaseDots"></div>
+                <div class="showcase-counter" id="showcaseCounter"></div>
+            </div>
+
+            <div style="text-align:center;margin:48px 0 24px" class="reveal">
+                <div class="line" style="margin:0 auto"></div>
+                <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px">Semua Produk</p>
+            </div>
+
             <div class="product-grid" id="productGrid">
                 <div class="no-products">
                     <p>Memuat produk...</p>

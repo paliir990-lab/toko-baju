@@ -75,24 +75,36 @@ function showShimmer() {
 
 // ===== RENDER PRODUCTS =====
 function renderProducts(products) {
-    const grid = document.getElementById('productGrid');
+    renderShowcase(products);
+    renderGrid(products);
+}
+
+function renderShowcase(products) {
+    const track = document.getElementById('showcaseTrack');
+    const dots = document.getElementById('showcaseDots');
+    const counter = document.getElementById('showcaseCounter');
+    const countEl = document.getElementById('productCount');
+
     if (!products.length) {
-        grid.innerHTML = '<div class="no-products"><p>Tidak ada produk ditemukan.</p></div>';
+        track.innerHTML = '';
+        dots.innerHTML = '';
+        if (counter) counter.textContent = '';
+        if (countEl) countEl.textContent = '';
         return;
     }
-    grid.innerHTML = products.map((p, i) => `
-        <div class="product-card stagger tilt" onclick="openLightbox(${p.id})" style="--delay:${i * 0.08}s">
-            <div class="product-img-wrapper">
-                <img src="${p.foto}" alt="${p.nama}" class="product-img"
-                     onerror="this.src='assets/images/products/placeholder.svg'">
-            </div>
-            <div class="product-info">
-                <div class="product-category">${p.kategori}</div>
-                <div class="product-name">${p.nama}</div>
-                <div class="product-price">${p.harga}</div>
-                <div class="product-variants">
-                    ${p.warna.slice(0, 3).map(w => `<span class="variant-tag">${w}</span>`).join('')}
-                    ${p.warna.length > 3 ? `<span class="variant-tag">+${p.warna.length - 3}</span>` : ''}
+
+    track.innerHTML = products.map(p => `
+        <div class="product-slide" onclick="openLightbox(${p.id})">
+            <img src="${p.foto}" alt="${p.nama}" class="product-slide-img"
+                 onerror="this.src='assets/images/products/placeholder.svg'">
+            <div class="product-slide-info">
+                <div class="product-slide-category">${p.kategori}</div>
+                <div class="product-slide-name">${p.nama}</div>
+                <div class="product-slide-price">${p.harga}</div>
+                <div class="product-slide-variants">
+                    ${p.warna.slice(0, 4).map(w => `<span class="variant-tag">${w}</span>`).join('')}
+                    ${p.warna.length > 4 ? `<span class="variant-tag">+${p.warna.length - 4}</span>` : ''}
+                    ${p.ukuran.slice(0, 3).map(u => `<span class="variant-tag">${u}</span>`).join('')}
                 </div>
                 <button class="btn-order" onclick="event.stopPropagation(); orderWhatsApp(${p.id})">
                     Pesan via WhatsApp
@@ -101,35 +113,61 @@ function renderProducts(products) {
         </div>
     `).join('');
 
-    // Staggered entrance
-    requestAnimationFrame(() => {
-        document.querySelectorAll('.product-card.stagger').forEach((card, i) => {
-            setTimeout(() => card.classList.add('visible'), i * 80);
-        });
-    });
+    dots.innerHTML = products.map((_, i) =>
+        `<button class="showcase-dot ${i === 0 ? 'active' : ''}" onclick="scrollToSlide(${i})"></button>`
+    ).join('');
 
-    // 3D tilt
-    setupTilt();
+    if (counter) counter.textContent = `1 / ${products.length}`;
+    if (countEl) countEl.textContent = `${products.length} produk`;
+
+    // Track scroll position for dots/counter
+    track.onscroll = function () {
+        const idx = Math.round(track.scrollLeft / (track.children[0]?.offsetWidth + 24 || 1));
+        document.querySelectorAll('.showcase-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+        if (counter) counter.textContent = `${idx + 1} / ${products.length}`;
+    };
 }
 
-// ===== 3D TILT EFFECT =====
-function setupTilt() {
-    document.querySelectorAll('.product-card.tilt').forEach(card => {
-        card.addEventListener('mousemove', function (e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -8;
-            const rotateY = ((x - centerX) / centerX) * 8;
-            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            this.classList.add('glowing');
-        });
+function scrollShowcase(dir) {
+    const track = document.getElementById('showcaseTrack');
+    const w = track.children[0]?.offsetWidth + 24 || 300;
+    track.scrollBy({ left: dir * w, behavior: 'smooth' });
+}
 
-        card.addEventListener('mouseleave', function () {
-            this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-            this.classList.remove('glowing');
+function scrollToSlide(idx) {
+    const track = document.getElementById('showcaseTrack');
+    const w = track.children[0]?.offsetWidth + 24 || 300;
+    track.scrollTo({ left: idx * w, behavior: 'smooth' });
+}
+
+function renderGrid(products) {
+    const grid = document.getElementById('productGrid');
+    if (!products.length) {
+        grid.innerHTML = '<div class="no-products"><p>Tidak ada produk ditemukan.</p></div>';
+        return;
+    }
+    grid.innerHTML = products.map((p, i) => `
+        <div class="product-card stagger" onclick="openLightbox(${p.id})" style="--delay:${i * 0.05}s">
+            <img src="${p.foto}" alt="${p.nama}" class="product-img"
+                 onerror="this.src='assets/images/products/placeholder.svg'">
+            <div class="product-info">
+                <div class="product-category">${p.kategori}</div>
+                <div class="product-name">${p.nama}</div>
+                <div class="product-price">${p.harga}</div>
+                <div class="product-variants">
+                    ${p.warna.slice(0, 2).map(w => `<span class="variant-tag">${w}</span>`).join('')}
+                    ${p.ukuran.slice(0, 2).map(u => `<span class="variant-tag">${u}</span>`).join('')}
+                </div>
+                <button class="btn-order" onclick="event.stopPropagation(); orderWhatsApp(${p.id})">
+                    Pesan
+                </button>
+            </div>
+        </div>
+    `).join('');
+
+    requestAnimationFrame(() => {
+        document.querySelectorAll('.product-grid .product-card.stagger').forEach((card, i) => {
+            setTimeout(() => card.classList.add('visible'), i * 50);
         });
     });
 }
