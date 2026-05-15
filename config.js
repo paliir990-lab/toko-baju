@@ -1,6 +1,6 @@
 const CONFIG = {
     brandName: "Toko Baju Test",
-    whatsapp: "6282123456789",
+    whatsapp: "6287828258491",
     whatsappMessage: "Halo, saya tertarik dengan produk ini:",
     instagram: "tokobaju_id",
     email: "tokobaju@email.com",
