@@ -485,7 +485,7 @@ nav a:hover::after {
 /* ===== PRODUCTS SECTION ===== */
 .products-section {
     padding: 100px 0;
-    background: var(--bg-primary);
+    background: rgba(10,10,10,0.85);
 }
 
 /* Filter Buttons */
@@ -842,7 +842,7 @@ nav a:hover::after {
 /* ===== TESTIMONIALS ===== */
 .testimonials-section {
     padding: 100px 0;
-    background: var(--bg-secondary);
+    background: rgba(17,17,17,0.85);
     position: relative;
 }
 
@@ -937,7 +937,7 @@ nav a:hover::after {
 /* ===== ABOUT ===== */
 .about-section {
     padding: 100px 0;
-    background: var(--bg-primary);
+    background: rgba(10,10,10,0.88);
 }
 
 .about-content {
@@ -955,7 +955,7 @@ nav a:hover::after {
 /* ===== CONTACT ===== */
 .contact-section {
     padding: 80px 0;
-    background: var(--bg-secondary);
+    background: rgba(17,17,17,0.88);
     text-align: center;
     border-top: 1px solid var(--border-color);
 }
