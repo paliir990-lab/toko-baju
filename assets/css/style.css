@@ -66,6 +66,30 @@ a {
     padding: 0 24px;
 }
 
+/* ===== 3D SCENE CONTAINER ===== */
+#scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#scene-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.site-content {
+    position: relative;
+    z-index: 2;
+    background: var(--bg-primary);
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
     width: 8px;
@@ -89,7 +113,7 @@ a {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0;
+    z-index: 3;
     overflow: hidden;
 }
 

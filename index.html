@@ -13,6 +13,12 @@
     <!-- ===== PARTICLES ===== -->
     <div class="particles" id="particles"></div>
 
+    <!-- ===== 3D SCENE CONTAINER ===== -->
+    <div id="scene-container" aria-hidden="true"></div>
+
+    <!-- ===== MAIN CONTENT WRAPPER ===== -->
+    <div class="site-content">
+
     <!-- ===== HEADER ===== -->
     <header>
         <div class="header-inner">
@@ -152,8 +158,13 @@
     <!-- ===== SCROLL TO TOP ===== -->
     <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
+    </div>
+    <!-- ===== END MAIN CONTENT ===== -->
+
     <!-- ===== SCRIPTS ===== -->
     <script src="config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/three-scene.js"></script>
     <script src="assets/js/script.js"></script>
 
 </body>
