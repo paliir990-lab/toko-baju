@@ -256,7 +256,7 @@ nav a:hover::after {
 /* ===== HERO ===== */
 .hero {
     padding: 160px 24px 100px;
-    background: var(--bg-primary);
+    background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 50%, var(--bg-primary) 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
