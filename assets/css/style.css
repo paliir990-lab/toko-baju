@@ -87,7 +87,6 @@ a {
 .site-content {
     position: relative;
     z-index: 2;
-    background: var(--bg-primary);
 }
 
 /* ===== SCROLLBAR ===== */
